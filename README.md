@@ -1,1 +1,0 @@
-# vedascope-bot
