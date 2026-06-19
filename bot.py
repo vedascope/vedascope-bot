@@ -63,6 +63,9 @@ def main_menu():
             [InlineKeyboardButton("Получить бесплатный прогноз на год", callback_data="free_forecast")],
             [InlineKeyboardButton("Календарь Панчанга", url="https://vedascope.ru/panchanga")],
             [InlineKeyboardButton("Ближайшие Джйотиш-мероприятия", url="https://vedascope.ru/#events")],
+            [InlineKeyboardButton("Мы на YouTube", url="https://www.youtube.com/@vedascope")],
+            [InlineKeyboardButton("Мы на VK", url="https://vk.com/vedascope")],
+            [InlineKeyboardButton("Ближайшие Джйотиш-мероприятия", url="https://vedascope.ru/#events")],
             [InlineKeyboardButton("Подписаться на @vedascope", url=CHANNEL_URL)],
         ]
     )
