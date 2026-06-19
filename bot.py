@@ -191,7 +191,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     if query.data == "panchanga":
         await query.message.reply_text(
-            "📅 Панчанга уже доступна:\n\nhttps://vedascope.ru/panchanga"
+            "📅 Панчанга уже доступна:\n\nhttps://vedascope.ru/panchanga\n\n"
             "Сейчас сервис находится на этапе финального тестирования."
         )
 
