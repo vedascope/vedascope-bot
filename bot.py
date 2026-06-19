@@ -59,13 +59,14 @@ FOOTER_TEXT = """
 def main_menu():
     return InlineKeyboardMarkup(
         [
-            [InlineKeyboardButton("Запись на консультацию", callback_data="consultation")],
-            [InlineKeyboardButton("Получить бесплатный прогноз на год", callback_data="free_forecast")],
             [InlineKeyboardButton("Календарь Панчанга", url="https://vedascope.ru/panchanga")],
             [InlineKeyboardButton("Ближайшие Джйотиш-мероприятия", url="https://vedascope.ru/#events")],
-            [InlineKeyboardButton("Мы на YouTube", url="https://www.youtube.com/@vedascope")],
-            [InlineKeyboardButton("Мы на VK", url="https://vk.com/vedascope")],
-            [InlineKeyboardButton("Ближайшие Джйотиш-мероприятия", url="https://vedascope.ru/#events")],
+            [InlineKeyboardButton("Запись на консультацию", callback_data="consultation")],
+            [InlineKeyboardButton("Получить бесплатный прогноз на год", callback_data="free_forecast")],
+            [
+                InlineKeyboardButton("Мы на YouTube", url="https://www.youtube.com/@vedascope"),
+                InlineKeyboardButton("Мы на VK", url="https://vk.com/vedascope"),
+            ],
             [InlineKeyboardButton("Подписаться на @vedascope", url=CHANNEL_URL)],
         ]
     )
@@ -151,10 +152,13 @@ async def send_long_text(message, text: str):
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "🙏 Добро пожаловать в VedaScope\n\n"
-        "Здесь вы можете записаться на консультацию, получить бесплатный прогноз на год, "
-        "посмотреть Панчангу и подписаться на канал.\n\n"
-        "Выберите действие ниже:",
+        "Добро пожаловать на vedascope — исследовательский проект для тех, "
+        "кто хочет глубже понять себя с помощью Джйотиш.\n\n"
+        "Здесь вы найдете сервисы для астрологов, обучающие материалы, "
+        "полезные ссылки, живую базу знаний, а также мероприятия "
+        "Джйотиш-сообщества.\n\n"
+        "Присоединяйтесь.\n\n"
+        "Выберите, с чего начать:",
         reply_markup=main_menu(),
     )
 
