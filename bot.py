@@ -61,7 +61,8 @@ def main_menu():
         [
             [InlineKeyboardButton("Запись на консультацию", callback_data="consultation")],
             [InlineKeyboardButton("Получить бесплатный прогноз на год", callback_data="free_forecast")],
-            [InlineKeyboardButton("Посмотреть Панчанг", callback_data="panchanga")],
+            [InlineKeyboardButton("Календарь Панчанга", url="https://vedascope.ru/panchanga")],
+            [InlineKeyboardButton("Ближайшие Джйотиш-мероприятия", url="https://vedascope.ru/#events")],
             [InlineKeyboardButton("Подписаться на @vedascope", url=CHANNEL_URL)],
         ]
     )
